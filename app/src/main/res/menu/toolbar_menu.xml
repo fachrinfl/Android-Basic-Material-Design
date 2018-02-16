@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_post"
+        android:title="@string/add_post"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"/>
+
+    <item
+        android:title=""
+        android:id="@+id/icn_search"
+        android:icon="@drawable/icn_search"
+        app:showAsAction="ifRoom" />
+    <item
+        android:title=""
+        android:id="@+id/icn_account"
+        android:icon="@drawable/icn_account"
+        app:showAsAction="ifRoom" />
+
+</menu>
