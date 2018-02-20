@@ -2,90 +2,116 @@ package com.fachrinfl.android_basic_material_design;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
+    LinearLayout llInput;
+    AppCompatEditText edtUsername, edtPassword;
+    TextInputLayout tilUsername, tilPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.navigation_drawer);
+        setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Menu");
         setSupportActionBar(toolbar);
+        toolbar.setTitle("Text Field");
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        llInput = (LinearLayout) findViewById(R.id.llInput);
+        llInput.setOnClickListener(null);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
-        drawerLayout.setDrawerListener(toggle);
+        edtUsername = (AppCompatEditText) findViewById(R.id.edtUsername);
+        edtUsername.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        toggle.syncState();
+            }
 
-    }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (edtUsername.getText().toString().isEmpty()){
+                    tilUsername.setErrorEnabled(true);
+                    tilUsername.setError("Username tidak boleh kosong");
+                } else {
+                    tilUsername.setErrorEnabled(false);
+                }
+            }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            @Override
+            public void afterTextChanged(Editable s) {
 
-        int id = item.getItemId();
+            }
+        });
 
-        switch (id){
+        edtPassword = (AppCompatEditText) findViewById(R.id.edtPassword);
+        edtPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            case R.id.inbox_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_inbox, Toast.LENGTH_LONG).show();
-                break;
+            }
 
-            case R.id.starred_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_starred, Toast.LENGTH_LONG).show();
-                break;
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (edtPassword.getText().toString().isEmpty()){
+                    tilPassword.setErrorEnabled(true);
+                    tilPassword.setError("Password tidak boleh kosong");
+                } else {
+                    tilPassword.setErrorEnabled(false);
+                }
+            }
 
-            case R.id.sent_mail_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_sent_mail, Toast.LENGTH_LONG).show();
-                break;
+            @Override
+            public void afterTextChanged(Editable s) {
 
-            case R.id.drafts_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_drafts, Toast.LENGTH_LONG).show();
-                break;
+            }
+        });
 
-            case R.id.all_mail_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_all_mail, Toast.LENGTH_LONG).show();
-                break;
+        tilUsername = (TextInputLayout) findViewById(R.id.tilUsername);
+        tilUsername.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
 
-            case R.id.trash_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_trash, Toast.LENGTH_LONG).show();
-                break;
+                if (edtUsername.getText().toString().isEmpty()){
+                    tilUsername.setErrorEnabled(true);
+                    tilUsername.setError("Username tidak boleh kosong");
+                } else {
+                    tilUsername.setErrorEnabled(false);
+                }
 
-            case R.id.spam_id:
-                Toast.makeText(getApplicationContext(), R.string.str_menu_spam, Toast.LENGTH_LONG).show();
-                break;
+            }
+        });
 
-        }
+        tilPassword = (TextInputLayout) findViewById(R.id.tilPassword);
+        tilPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
 
-        drawerLayout.closeDrawer(GravityCompat.START);
+                if (edtPassword.getText().toString().isEmpty()){
+                    tilPassword.setErrorEnabled(true);
+                    tilPassword.setError("Password tidak boleh kosong");
+                } else {
+                    tilPassword.setErrorEnabled(false);
+                }
 
-        return true;
-    }
+            }
+        });
 
-    @Override
-    public void onBackPressed() {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 }

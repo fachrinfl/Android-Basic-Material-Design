@@ -1,18 +1,5 @@
 <resources>
-    <string name="app_name">Navigation Drawer</string>
-    <string name="my_profile_image">My Profile Image</string>
-    <string name="name_profile">Fachri Naufal</string>
-    <string name="email_account">fachrinaufal@gmail.com</string>
-
-    <string name="str_menu_inbox">Inbox</string>
-    <string name="str_menu_starred">Starred</string>
-    <string name="str_menu_sent_mail">Sent mail</string>
-    <string name="str_menu_drafts">Drafts</string>
-    <string name="str_menu_sub_header">Sub Header</string>
-    <string name="str_menu_all_mail">All mail</string>
-    <string name="str_menu_trash">Trash</string>
-    <string name="str_menu_spam">Spam</string>
-
-    <string name="open_drawer">Open navigation drawer</string>
-    <string name="close_drawer">Close navigation drawer</string>
+    <string name="app_name">Text Field</string>
+    <string name="str_edt_username">Username</string>
+    <string name="str_edt_password">Password</string>
 </resources>
