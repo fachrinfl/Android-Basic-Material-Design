@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DialogBasic" />
+        <activity android:name=".DialogConfirmation" />
+        <activity android:name=".CircularProgressDialogs" />
+        <activity android:name=".LinearProgressDialog"></activity>
     </application>
 
 </manifest>

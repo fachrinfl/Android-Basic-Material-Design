@@ -1,15 +1,37 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ProgressBarTheme" parent="Widget.AppCompat.ProgressBar">
-        <item name="colorAccent">@color/colorProgressBar</item>
+    <style name="AlertDialogBasicTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:background">@color/colorAlertDialogs</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+
+    </style>
+
+    <style name="ConfirmationDialogsTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorConfirmationsDialogs</item>
+
+    </style>
+
+    <style name="CircularDialogsTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorCicularProgressDialogs</item>
+
+    </style>
+
+    <style name="LinearDialogsTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorLinearProgressDialogs</item>
+
     </style>
 
 </resources>

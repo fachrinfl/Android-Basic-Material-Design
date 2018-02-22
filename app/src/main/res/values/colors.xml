@@ -3,5 +3,8 @@
     <color name="colorPrimary">#26A69A</color>
     <color name="colorPrimaryDark">#00897B</color>
     <color name="colorAccent">#FDD835</color>
-    <color name="colorProgressBar">#009688</color>
+    <color name="colorAlertDialogs">#00796B</color>
+    <color name="colorConfirmationsDialogs">#2196F3</color>
+    <color name="colorCicularProgressDialogs">#FBC02D</color>
+    <color name="colorLinearProgressDialogs">#2E7D32</color>
 </resources>
