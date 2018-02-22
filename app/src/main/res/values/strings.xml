@@ -8,7 +8,7 @@
     <string name="str_menu_starred">Starred</string>
     <string name="str_menu_sent_mail">Sent mail</string>
     <string name="str_menu_drafts">Drafts</string>
-    <string name="str_menu_sub_header">Sub Header</string>
+    <string name="str_menu_sub_header">Labels</string>
     <string name="str_menu_all_mail">All mail</string>
     <string name="str_menu_trash">Trash</string>
     <string name="str_menu_spam">Spam</string>

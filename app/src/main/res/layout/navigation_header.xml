@@ -7,7 +7,7 @@
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
-    android:background="@drawable/headerbackground">
+    android:background="@drawable/materidesign_background">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="56dp"
