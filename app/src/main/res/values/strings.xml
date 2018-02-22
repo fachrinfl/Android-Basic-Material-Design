@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Android-Basic-Material-Design</string>
+    <string name="app_name">Tab Layout</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="recents">Recents</string>
+    <string name="favorites">Favorites</string>
+    <string name="nearby">Near By</string>
 </resources>
