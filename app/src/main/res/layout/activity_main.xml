@@ -1,18 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fachrinfl.android_basic_material_design.MainActivity">
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Seekbar"
+        android:textSize="18sp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seekBar_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:max="100"
+        custom:theme="@style/SeekBarTheme"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value : "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/valueSeekbar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material Rangebar"
+        android:textSize="18sp"/>
+
+    <com.appyvet.rangebar.RangeBar
+        android:id="@+id/rangeBar_id"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:rangeBar="false"
+        app:pinPadding="20dp"
+        app:tickStart="1"
+        app:tickEnd="10"
+        app:tickInterval="1"
+        app:pinRadius="16dp"
+        app:selectorSize="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value : "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/valueRangebar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material Rangebar Two Pin"
+        android:textSize="18sp"/>
+
+    <com.appyvet.rangebar.RangeBar
+        android:id="@+id/rangeBar_two_pin_id"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:rangeBar="true"
+        app:pinPadding="20dp"
+        app:tickStart="10"
+        app:tickEnd="20"
+        app:tickInterval="1"
+        app:pinRadius="16dp"
+        app:selectorSize="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value Left : "
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/valueRangebar_two_pin_left_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value Right : "
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/valueRangebar_two_pin_right_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
