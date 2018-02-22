@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Title");
-        toolbar.setSubtitle("Sub title");
+        toolbar.setTitle("Toolbar");
+        toolbar.setSubtitle("with android material design");
         setSupportActionBar(toolbar);
 
     }
