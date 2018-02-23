@@ -1,6 +1,6 @@
 # Android-Basic-Material-Design
 Simple basic material design for Android 
-#### Just switch branch with material design what you need and run
+#### Just switch branch with material design what you want and run
 
 ![part-1](https://user-images.githubusercontent.com/28708584/36574465-886822a4-1878-11e8-9524-a9d4dc68cb7e.jpg)
 ![part-2](https://user-images.githubusercontent.com/28708584/36574466-88ac02da-1878-11e8-8f1b-e4fd26c7c3ea.jpg)
